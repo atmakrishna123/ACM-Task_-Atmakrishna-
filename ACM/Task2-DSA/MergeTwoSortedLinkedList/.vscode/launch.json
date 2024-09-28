@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/atmak/OneDrive/Desktop/ACMTASKS/ACM-Task_-Atmakrishna-/ACM/Task2-DSA/MergeTwoSortedLinkedList",
+      "program": "c:/Users/atmak/OneDrive/Desktop/ACMTASKS/ACM-Task_-Atmakrishna-/ACM/Task2-DSA/MergeTwoSortedLinkedList/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

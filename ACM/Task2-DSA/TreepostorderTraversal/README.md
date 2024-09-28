@@ -1,0 +1,1 @@
+Here we pass a pointer root to the struct node as argument to the postOrder(). If the value of root is NULL then there are no nodes to process and we terminate the function. The line postOrder(root->left) calls the left subtree and the line postOrder(root-right) calls the right subtree. Then finally we print the value of the root.

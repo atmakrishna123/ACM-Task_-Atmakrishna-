@@ -1,0 +1,1 @@
+Here we pass a pointer root to the struct node as argument to the preOrder funtion. Incase the value of root is NULL we terminate the program. We then print the value of root , then we go for the left subtree and later right subtree as we does recursion.
