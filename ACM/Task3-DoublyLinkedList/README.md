@@ -1,0 +1,40 @@
+CREATENODE
+
+The createNode function is designed to make a new node for our doubly linked list. When you give it a number (the data), it uses that to create a node. It sets aside some memory for this node and assigns the number to the node's data field. Since it’s a new node and doesn’t connect to anything yet, both its prev and next pointers are set to NULL. Finally, the function returns this newly created node, which can be added to the list later.
+
+INSERTATBEGINNING
+
+With the insertAtBeginning function, you can easily add a new node to the start of the list. It first creates a new node using the createNode function. If the list is currently empty (meaning the head is NULL), this new node will simply become the head of the list. If there are already nodes in the list, it links the new node to the existing head. The new node’s next pointer points to the current head, and the old head’s prev pointer now points back to the new node. Finally, it updates the head pointer to point to the new node, effectively placing it at the beginning of the list.
+
+INSERTATEND
+
+The insertAtEnd function allows you to add a new node to the end of the list. It starts by creating a new node using the createNode function. If the list is empty (the head is NULL), this new node becomes the head. If the list has some nodes, it traverses the list to find the last node by checking each node’s next pointer until it finds one that points to NULL. Once it finds the last node, it sets the new node’s prev pointer to the last node and updates the last node’s next pointer to point to the new node, successfully inserting it at the end of the list.
+
+INSERTATPOSITION
+
+The insertAtPosition function gives you the flexibility to insert a new node at any position in the list. If you want to insert at position 1, it calls the insertAtBeginning function to handle that. For other positions, it first creates the new node. It then traverses the list to find the node just before the desired position. If the position is beyond the end of the list, it calls insertAtEnd to add the node at the end instead. If it finds the right spot, it links the new node between the previous node and the next node by updating their pointers accordingly.
+
+DELETEFROMBEGINNING
+
+The deleteFromBeginning function is straightforward; it removes the first node from the list. If the list is empty (head is NULL), there’s nothing to remove, so it simply returns. If there’s a node to remove, it keeps a temporary pointer to the current head and then updates the head to the next node in the list. If the new head is not NULL, it sets its prev pointer to NULL, making it the new starting point of the list. Finally, it frees up the memory used by the old head node.
+
+
+DELETEFROMEND
+
+In the deleteFromEnd function, the goal is to remove the last node from the list. If the list is empty, it just returns since there’s nothing to delete. If there’s only one node, it frees that node and sets the head to NULL, indicating the list is now empty. If there are multiple nodes, the function traverses the list to find the last node. Once it reaches the end, it updates the second-to-last node’s next pointer to NULL, effectively removing the last node and freeing its memory.
+
+DELETEFROMPOSITION
+
+The deleteFromPosition function allows you to remove a node from a specific position in the list. It first checks if the list is empty, returning immediately if it is. If you want to delete the first node, it calls deleteFromBeginning. For other positions, it traverses the list to find the specified node. If the position is out of bounds, it calls deleteFromEnd to remove the last node instead. If the specified position is valid, it updates the adjacent nodes' pointers to bypass the node being removed and frees its memory.
+
+TRAVERSEFORWARD
+
+The traverseForward function prints out the data from each node in the list starting from the head and moving toward the end. It begins at the head and continues to each subsequent node, printing the data until it reaches the end of the list (when the pointer becomes NULL). After printing all the values, it adds a newline for neatness.
+
+TRAVERSEBACKWARD
+
+In the traverseBackward function, we print the data from each node in the list, but this time from the end back to the beginning. If the list is empty, it simply returns. If there are nodes, it first moves to the last node by traversing the list. Then, it works backward using the prev pointers, printing the data from each node until it gets back to the start. At the end, it also adds a newline for better formatting.
+
+MAIN()
+
+The main function is where everything comes together. It starts by initializing the head of the linked list to NULL, indicating that the list is empty. Then, it demonstrates various operations by inserting nodes at different positions, deleting nodes from the beginning, end, and specified positions. Finally, it calls the traversal functions to print the list from start to end and from end to start, showcasing how the list has changed after the operations.
