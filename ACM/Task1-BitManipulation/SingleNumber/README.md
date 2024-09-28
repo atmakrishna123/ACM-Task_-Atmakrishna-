@@ -1,0 +1,1 @@
+Here we pass a pointer nums and an integer as argumnet, the return type is set as int. We run a for loop and set every time each of the indices as  temp. The count is set to 0. Then we go for a nested loop that check the occurences of the number and incremenet the count. In case we find some number to occur just once we return that nummber else we return -1.
